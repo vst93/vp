@@ -1,0 +1,6 @@
+{
+    "require": {
+        "catfan/medoo": "^1.5",
+        "phpunit/php-text-template": "^1.2"
+    }
+}

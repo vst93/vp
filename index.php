@@ -1,26 +1,15 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: admin-v
- * Date: 2018/11/1
- * Time: 23:05
+ * User: vv
+ * Date: 2018/9/12
+ * Time: 18:51
  */
+include_once('class/db.php');
+$pdo = new db();
 
-echo '{
-  "text" : "text, this field may accept markdown",
-  "attachments" : [
-    {
-      "title" : "title_1",
-      "text" : "attachment_text",
-      "color" : "#666666",
-      "images" : [
-        {
-          "url" : "http://example.com/index.jpg"
-        },
-        {
-          "url" : "http://example.com/index.jpg"
-        }
-      ]
-    }
-  ]
-}';
+// SELECT * FROM users WHERE id = ?
+$data = $pdo->vDelete('users',['id[<]'=>2]);
+
+
+var_dump($data);
